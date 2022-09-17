@@ -25,9 +25,12 @@ function Button({ text }) {
         transition: 'all 100ms linear',
       }}
       onClick={() => {
-        fetch(`http://localhost:3001/count/${text.toLowerCase()}`, {
-          method: 'PATCH',
-        })
+        fetch(
+          `https://counter-mern-project-backend.herokuapp.com/count/${text.toLowerCase()}`,
+          {
+            method: 'PATCH',
+          }
+        )
       }}
       onMouseDown={() => setIsActive(true)}
       onMouseUp={() => {
